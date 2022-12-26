@@ -1,4 +1,5 @@
 import './App.css';
+import { X  ,Divide , Minus , Plus , Equal , Backspace} from 'tabler-icons-react';
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
           <div className="keypad">
             <div className='row'>
               <div id="clear">AC</div>
-              <div id="delete">delete</div>
+              <div id="delete"><Backspace/></div>
             </div>
             <div className='row'>
               <div id="seven">7</div>
@@ -32,11 +33,11 @@ function App() {
             </div>   
           </div>
           <div className="operation">
-                <div id="equals">=</div>
-                <div id="divide">~</div>
-                <div id="multiply">*</div>
-                <div id="subtract">-</div>
-                <div id="add">+</div>
+                <div id="equals"><Equal/></div>
+                <div id="divide"><Divide/></div>
+                <div id="multiply"><X/></div>
+                <div id="subtract"><Minus/></div>
+                <div id="add"><Plus/></div>
           </div>
         </div>
 
