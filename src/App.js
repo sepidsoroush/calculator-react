@@ -2,6 +2,9 @@ import './App.css';
 import { X  ,Divide , Minus , Plus , Equal , Backspace} from 'tabler-icons-react';
 
 function App() {
+  function addNumber(event){
+    console.log(event.target.value);
+  }
   return (
     <div className="App">
       <div className="container">
@@ -13,7 +16,7 @@ function App() {
               <div id="delete" className='clear button w1'><Backspace /></div>
             </div>
             <div className='row'>
-              <div id="seven" className='button w1'>7</div>
+              <div id="seven" className='button w1' onClick={addNumber}>7</div>
               <div id="eight" className='button w1'>8</div>  
               <div id="nine" className='button w1'>9</div>
             </div>    
@@ -33,11 +36,11 @@ function App() {
             </div>   
           </div>
           <div >
-                <div id="divide" className='operation button w1'><Divide/></div>
-                <div id="multiply" className='operation button w1'><X/></div>
-                <div id="subtract" className='operation button w1'><Minus/></div>
-                <div id="add" className='operation button w1'><Plus/></div>
-                <div id="equals" className='operation button w1'><Equal /></div>
+              <div id="divide" className='operation button w1'><Divide/></div>
+              <div id="multiply" className='operation button w1'><X/></div>
+              <div id="subtract" className='operation button w1'><Minus/></div>
+              <div id="add" className='operation button w1'><Plus/></div>
+              <div id="equals" className='operation button w1'><Equal /></div>
           </div>
         </div>
 

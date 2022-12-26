@@ -15,7 +15,7 @@
 }
 .container{
     background-color: #000000;
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 10px;
 }
 #display{
@@ -42,9 +42,13 @@
     background-color: #4a4a4a;
     font-size: 28px;
     color: white;
+    transition: all 0.5s ease-in-out;
 }
-.button:hover {
-    border: 1px solid #4a4a4a;
+.button:active {
+    transform: scale(0.9);
+}
+.button:hover{
+    opacity: 0.85;
 }
 .w2 {
     width : 160px;
