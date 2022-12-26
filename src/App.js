@@ -43,7 +43,7 @@ function App() {
 
       </div>
       <div className="footer">
-        <p>by <a href="https://github.com/sepidsoroush" target="_blank">sepidsoroush</a></p>
+        <p>Designed & Coded by <a href="https://github.com/sepidsoroush" target="_blank">SepidSoroush</a></p>
       </div>
 
 

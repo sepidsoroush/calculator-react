@@ -37,11 +37,14 @@
     justify-content: center;
     align-items: center;
     border: 2px solid #000000;
-    border-radius: 15px;
+    border-radius: 10px;
     height: 80px;
     background-color: #4a4a4a;
     font-size: 28px;
     color: white;
+}
+.button:hover {
+    border: 1px solid #4a4a4a;
 }
 .w2 {
     width : 160px;
@@ -63,5 +66,6 @@
     text-decoration: none;
     color: black;
     margin-top: 10px ;
+    font-size: 12px;
 }
 
