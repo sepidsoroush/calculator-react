@@ -33,11 +33,11 @@ function App() {
             </div>   
           </div>
           <div >
-                <div id="equals" className='operation button w1'><Equal /></div>
                 <div id="divide" className='operation button w1'><Divide/></div>
                 <div id="multiply" className='operation button w1'><X/></div>
                 <div id="subtract" className='operation button w1'><Minus/></div>
                 <div id="add" className='operation button w1'><Plus/></div>
+                <div id="equals" className='operation button w1'><Equal /></div>
           </div>
         </div>
 
