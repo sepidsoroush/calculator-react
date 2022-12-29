@@ -1,8 +1,17 @@
 import { useState } from 'react'; 
 import './App.css';
-import { X  ,Divide , Minus , Plus , Equal , Backspace, Calculator} from 'tabler-icons-react';
+import { X  ,Divide , Minus , Plus , Equal , Backspace} from 'tabler-icons-react';
 
 function App() {
+  // declare variables
+  let currentDisplay;
+  let PreviousDisplay;
+  let operation ;
+  function clearAll(){
+    currentDisplay = "";
+    PreviousDisplay = "";
+    operation = undefined ;
+  }
 
   return (
     <div className="App">
@@ -12,7 +21,7 @@ function App() {
         <div className='buttons'>
           <div className="keypad">
             <div className='row'>
-              <button id="clear" className='clear button w2'>AC</button>
+              <button id="clear" className='clear button w2' onClick={clearAll}>AC</button>
               <button id="delete" className='clear button w1'><Backspace /></button>
             </div>
             <div className='row'>
