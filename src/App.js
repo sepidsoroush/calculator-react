@@ -5,15 +5,14 @@ import { X  ,Divide , Minus , Plus , Equal , Backspace} from 'tabler-icons-react
 function App() {
 
   // declare variables
-  let currentNum;
-  let previousNum;
-  let operation ;
+  let currentNum ="5";
+  let previousNum ="4";
   let number = 0;
+  let result = 0;
 
   function clearAll(){
     currentNum = "";
     previousNum = "";
-    operation = undefined ;
   }
 
   function deleteNum(){
@@ -23,15 +22,21 @@ function App() {
   function appendNum(event){
     number = event.target.value;
     currentNum =  currentNum + number;
-    console.log(currentNum);
+    console.log(Number(currentNum));
+  }
+  function AddNums(event){
+    currentNum = event.target.value;
+    result =  Number(currentNum + previousNum);
   }
 
   return (
     <div className="App">
       <div className="container">
         <div id="display">
-          {previousNum}
-          {currentNum}
+          <div className="display">{previousNum}</div>
+          <div className="display">{currentNum}</div>
+          
+          
         </div>
         <div className='buttons'>
           <div className="keypad">
@@ -63,7 +68,7 @@ function App() {
               <button id="divide" className='operation button w1'><Divide/></button>
               <button id="multiply" className='operation button w1'><X/></button>
               <button id="subtract" className='operation button w1'><Minus/></button>
-              <button id="add" className='operation button w1'><Plus/></button>
+              <button id="add" className='operation button w1' onClick={AddNums}><Plus/></button>
               <button id="equals" className='operation button w1'><Equal /></button>
           </div>
         </div>
