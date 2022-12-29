@@ -3,13 +3,15 @@ import './App.css';
 import { X  ,Divide , Minus , Plus , Equal , Backspace} from 'tabler-icons-react';
 
 function App() {
+  
   // declare variables
   let currentDisplay;
-  let PreviousDisplay;
+  let previousDisplay;
   let operation ;
+
   function clearAll(){
     currentDisplay = "";
-    PreviousDisplay = "";
+    previousDisplay = "";
     operation = undefined ;
   }
 
@@ -17,6 +19,8 @@ function App() {
     <div className="App">
       <div className="container">
         <div id="display">
+          {previousDisplay}
+          {currentDisplay}
         </div>
         <div className='buttons'>
           <div className="keypad">
