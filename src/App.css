@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -22,6 +23,10 @@
     width: 320px;
     height: 100px;
     padding: 40px 10px;
+    color: white;
+    text-align: right;
+    font-size: 24px;
+    font-family: 'Share Tech Mono', monospace;
 }
 .buttons{
     display: flex;
@@ -42,7 +47,7 @@
     background-color: #4a4a4a;
     font-size: 28px;
     color: white;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 .button:active {
     transform: scale(0.9);

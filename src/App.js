@@ -1,46 +1,46 @@
+import { useState } from 'react'; 
 import './App.css';
-import { X  ,Divide , Minus , Plus , Equal , Backspace} from 'tabler-icons-react';
+import { X  ,Divide , Minus , Plus , Equal , Backspace, Calculator} from 'tabler-icons-react';
 
 function App() {
-  function addNumber(event){
-    console.log(event.target.value);
-  }
+
   return (
     <div className="App">
       <div className="container">
-        <div id="display"></div>
+        <div id="display">
+        </div>
         <div className='buttons'>
           <div className="keypad">
             <div className='row'>
-              <div id="clear" className='clear button w2'>AC</div>
-              <div id="delete" className='clear button w1'><Backspace /></div>
+              <button id="clear" className='clear button w2'>AC</button>
+              <button id="delete" className='clear button w1'><Backspace /></button>
             </div>
             <div className='row'>
-              <div id="seven" className='button w1' onClick={addNumber}>7</div>
-              <div id="eight" className='button w1'>8</div>  
-              <div id="nine" className='button w1'>9</div>
+              <button id="seven" className='button w1'>7</button>
+              <button id="eight" className='button w1'>8</button>  
+              <button id="nine" className='button w1'>9</button>
             </div>    
             <div className="row">
-              <div id="four" className='button w1'>4</div>
-              <div id="five" className='button w1'>5</div>
-              <div id="six" className='button w1'>6</div>
+              <button id="four" className='button w1'>4</button>
+              <button id="five" className='button w1'>5</button>
+              <button id="six" className='button w1'>6</button>
             </div>    
             <div className="row">
-              <div id="one" className='button w1'>1</div>
-              <div id="two" className='button w1'>2</div>
-              <div id="three" className='button w1'>3</div>
+              <button id="one" className='button w1'>1</button>
+              <button id="two" className='button w1'>2</button>
+              <button id="three" className='button w1'>3</button>
             </div> 
             <div className="row">
-              <div id="zero" className='button w2'>0</div>
-              <div id="decimal" className='button w1'>.</div>
+              <button id="zero" className='button w2'>0</button>
+              <button id="decimal" className='button w1'>.</button>
             </div>   
           </div>
           <div >
-              <div id="divide" className='operation button w1'><Divide/></div>
-              <div id="multiply" className='operation button w1'><X/></div>
-              <div id="subtract" className='operation button w1'><Minus/></div>
-              <div id="add" className='operation button w1'><Plus/></div>
-              <div id="equals" className='operation button w1'><Equal /></div>
+              <button id="divide" className='operation button w1'><Divide/></button>
+              <button id="multiply" className='operation button w1'><X/></button>
+              <button id="subtract" className='operation button w1'><Minus/></button>
+              <button id="add" className='operation button w1'><Plus/></button>
+              <button id="equals" className='operation button w1'><Equal /></button>
           </div>
         </div>
 
