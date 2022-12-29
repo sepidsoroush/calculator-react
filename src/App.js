@@ -5,13 +5,13 @@ import { X  ,Divide , Minus , Plus , Equal , Backspace} from 'tabler-icons-react
 function App() {
 
   // declare variables
-  let currentNum = 0;
+  let currentNum = "0";
   let previousNum ="";
   let number = 0;
   let result = 0;
 
   function clearAll(){
-    currentNum = "";
+    currentNum = "0";
     previousNum = "";
   }
 
@@ -46,22 +46,22 @@ function App() {
             </div>
             <div className='row'>
               <button value={7} id="seven" className='button w1' onClick={appendNum}>7</button>
-              <button id="eight" className='button w1'>8</button>  
-              <button id="nine" className='button w1'>9</button>
+              <button value={8} id="eight" className='button w1' onClick={appendNum}>8</button>  
+              <button value={9} id="nine" className='button w1' onClick={appendNum}>9</button>
             </div>    
             <div className="row">
-              <button id="four" className='button w1'>4</button>
-              <button id="five" className='button w1'>5</button>
-              <button id="six" className='button w1'>6</button>
+              <button value={4} id="four" className='button w1' onClick={appendNum}>4</button>
+              <button value={5} id="five" className='button w1' onClick={appendNum}>5</button>
+              <button value={6} id="six" className='button w1' onClick={appendNum}>6</button>
             </div>    
             <div className="row">
-              <button id="one" className='button w1'>1</button>
-              <button id="two" className='button w1'>2</button>
-              <button id="three" className='button w1'>3</button>
+              <button value={1} id="one" className='button w1' onClick={appendNum}>1</button>
+              <button value={2} id="two" className='button w1' onClick={appendNum}>2</button>
+              <button value={3} id="three" className='button w1' onClick={appendNum}>3</button>
             </div> 
             <div className="row">
-              <button id="zero" className='button w2'>0</button>
-              <button id="decimal" className='button w1'>.</button>
+              <button value={0} id="zero" className='button w2' onClick={appendNum}>0</button>
+              <button value={"."} id="decimal" className='button w1' onClick={appendNum}>.</button>
             </div>   
           </div>
           <div >
