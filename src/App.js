@@ -3,7 +3,7 @@ import './App.css';
 import { X  ,Divide , Minus , Plus , Equal , Backspace} from 'tabler-icons-react';
 
 function App() {
-  
+
   // declare variables
   let currentDisplay;
   let previousDisplay;
@@ -13,6 +13,10 @@ function App() {
     currentDisplay = "";
     previousDisplay = "";
     operation = undefined ;
+  }
+
+  function deleteNum(){
+    currentDisplay = previousDisplay.toString().slice(0,-1);
   }
 
   return (
@@ -26,7 +30,7 @@ function App() {
           <div className="keypad">
             <div className='row'>
               <button id="clear" className='clear button w2' onClick={clearAll}>AC</button>
-              <button id="delete" className='clear button w1'><Backspace /></button>
+              <button id="delete" className='clear button w1' onClick={deleteNum}><Backspace /></button>
             </div>
             <div className='row'>
               <button id="seven" className='button w1'>7</button>
