@@ -5,8 +5,8 @@ import { X  ,Divide , Minus , Plus , Equal , Backspace} from 'tabler-icons-react
 function App() {
 
   // declare variables
-  let currentNum ="5";
-  let previousNum ="4";
+  let currentNum = 0;
+  let previousNum ="";
   let number = 0;
   let result = 0;
 
