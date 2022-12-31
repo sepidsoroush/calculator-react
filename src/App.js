@@ -7,8 +7,8 @@ function App() {
   // declare variables
   let currentNum = "0";
   let previousNum ="";
-  let number = 0;
   let result = 0;
+  const [current , setCurrent] = useState("0");
 
   function clearAll(){
     currentNum = "0";
@@ -20,9 +20,9 @@ function App() {
   }
 
   function appendNum(event){
-    number = event.target.value;
-    currentNum =  currentNum + number;
-    console.log(Number(currentNum));
+    setCurrent(event.target.value);
+    // console.log(Number(setCurrent));
+    console.log(setCurrent);
   }
   function AddNums(event){
     currentNum = event.target.value;
@@ -34,7 +34,7 @@ function App() {
       <div className="container">
         <div id="display">
           <div className="display">{previousNum}</div>
-          <div className="display">{currentNum}</div>
+          <div className="display">{current}</div>
           
           
         </div>
