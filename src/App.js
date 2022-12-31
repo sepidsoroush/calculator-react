@@ -7,8 +7,23 @@ function App() {
   // declare variables
   let currentNum = "0";
   let previousNum ="";
-  let result = 0;
   const [current , setCurrent] = useState("0");
+  const [formula , setFormula] =useState("");
+  // let element = document.querySelector(".button");
+  // element.addEventListener("click", appendNum);
+
+  function appendNum(number){
+    
+    if(number === "." && currentNum.includes(".") )return
+    currentNum =  number.target.value;
+    setCurrent(currentNum);
+    previousNum += currentNum;
+
+    setFormula(previousNum);
+    console.log(number);
+
+
+  }
 
   function clearAll(){
     currentNum = "0";
@@ -19,21 +34,14 @@ function App() {
     currentNum = previousNum.toString().slice(0,-1);
   }
 
-  function appendNum(event){
-    setCurrent(event.target.value);
-    // console.log(Number(setCurrent));
-    console.log(setCurrent);
-  }
-  function AddNums(event){
-    currentNum = event.target.value;
-    result =  Number(currentNum + previousNum);
-  }
+
+
 
   return (
     <div className="App">
       <div className="container">
         <div id="display">
-          <div className="display">{previousNum}</div>
+          <div className="display">{formula}</div>
           <div className="display">{current}</div>
           
           
@@ -68,7 +76,7 @@ function App() {
               <button id="divide" className='operation button w1'><Divide/></button>
               <button id="multiply" className='operation button w1'><X/></button>
               <button id="subtract" className='operation button w1'><Minus/></button>
-              <button id="add" className='operation button w1' onClick={AddNums}><Plus/></button>
+              <button id="add" className='operation button w1'><Plus/></button>
               <button id="equals" className='operation button w1'><Equal /></button>
           </div>
         </div>
