@@ -34,17 +34,11 @@ function App() {
     currentNum = previousNum.toString().slice(0,-1);
   }
 
-
-
-
-  return (
-    <div className="App">
-      <div className="container">
+  const Calculator = () => (
+    <div className="container">
         <div id="display">
           <div className="display">{formula}</div>
           <div className="display">{current}</div>
-          
-          
         </div>
         <div className='buttons'>
           <div className="keypad">
@@ -80,15 +74,23 @@ function App() {
               <button id="equals" className='operation button w1'><Equal /></button>
           </div>
         </div>
-
       </div>
-      <div className="footer">
+  );
+  const Author = () => (
+    <div className="footer">
         <p>Designed & Coded by <a href="https://github.com/sepidsoroush" target="_blank">SepidSoroush</a></p>
-      </div>
+    </div>
+  );
 
-
+  return (
+    <div className="App">
+      <Calculator />
+      <Author />
     </div>
   );
 }
+
+
+
 
 export default App;
