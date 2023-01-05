@@ -10,18 +10,24 @@ function App() {
   const ops = ["/" , "*" , "+" , "-" , "."];
 
   const updateCalc = value =>{
+    //define an if  to stop operations repeat themself and start formula with operation signs
     if (
       (ops.includes(value) && calc === "") ||
       (ops.includes(value) && ops.includes(calc.slice(-1)))
     ) return ;
-    
+
     setCalc(calc + value);
+    
+    if(!ops.includes(value)){
+      setResult(eval(calc+value).toString());
+    }
+
   }
 
   const Calculator = () => (
     <div className="container">
         <div id="display">
-          <div className="display">{result? 0 : ""}</div>
+          <div className="display">{result}</div>
           <div className="display">{calc || "0"}</div>
         </div>
         <div className='buttons'>
