@@ -28,6 +28,15 @@ function App() {
     setCalc(eval(calc).toString());
    }
 
+
+   const deleteLast = () =>{
+    if (calc === ""){
+      return;
+    }
+    const value = calc.slice(0,-1);
+    setCalc(value);
+   }
+
   const Calculator = () => (
     <div className="container">
         <div id="display">
@@ -38,7 +47,7 @@ function App() {
           <div className="keypad">
             <div className='row'>
               <button id="clear" className='clear button w2'>AC</button>
-              <button id="delete" className='clear button w1'><Backspace /></button>
+              <button id="delete" className='clear button w1' onClick={deleteLast}><Backspace /></button>
             </div>
             <div className='row'>
               <button value={7} id="seven" className='button w1' onClick={() => updateCalc("7")}>7</button>
