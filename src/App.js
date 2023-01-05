@@ -15,8 +15,8 @@ function App() {
   const Calculator = () => (
     <div className="container">
         <div id="display">
-          <div className="display"></div>
-          <div className="display"></div>
+          <div className="display">{result? 0 : ""}</div>
+          <div className="display">{calc || "0"}</div>
         </div>
         <div className='buttons'>
           <div className="keypad">
