@@ -27,14 +27,20 @@ function App() {
    const equal = () => {
     setCalc(eval(calc).toString());
    }
-
-
+   
+   // define a function to delete the last character
    const deleteLast = () =>{
     if (calc === ""){
       return;
     }
     const value = calc.slice(0,-1);
     setCalc(value);
+   }
+
+   // define a function to clear all characters in calculator
+   const clearAll = () => {
+    setResult("");
+    setCalc("0");
    }
 
   const Calculator = () => (
@@ -46,7 +52,7 @@ function App() {
         <div className='buttons'>
           <div className="keypad">
             <div className='row'>
-              <button id="clear" className='clear button w2'>AC</button>
+              <button id="clear" className='clear button w2' onClick={clearAll}>AC</button>
               <button id="delete" className='clear button w1' onClick={deleteLast}><Backspace /></button>
             </div>
             <div className='row'>
