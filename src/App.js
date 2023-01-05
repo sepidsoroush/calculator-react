@@ -4,7 +4,13 @@ import { X  ,Divide , Minus , Plus , Equal , Backspace} from 'tabler-icons-react
 
 function App() {
 
-
+  //declare variables
+  const [calc , setCalc] = useState("");
+  const [result , setResult] = useState("");
+  const ops = ["/" , "*" , "+" , "-" , "."];
+  const updateCalc = value =>{
+    setCalc(calc + value);
+  }
 
   const Calculator = () => (
     <div className="container">
