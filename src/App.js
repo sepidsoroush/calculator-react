@@ -45,10 +45,10 @@ function App() {
             </div>   
           </div>
           <div >
-              <button id="divide" className='operation button w1'><Divide/></button>
-              <button id="multiply" className='operation button w1'><X/></button>
-              <button id="subtract" className='operation button w1'><Minus/></button>
-              <button id="add" className='operation button w1'><Plus/></button>
+              <button id="divide" className='operation button w1' onClick={() => updateCalc("/")}><Divide/></button>
+              <button id="multiply" className='operation button w1' onClick={() => updateCalc("*")}><X/></button>
+              <button id="subtract" className='operation button w1' onClick={() => updateCalc("-")}><Minus/></button>
+              <button id="add" className='operation button w1' onClick={() => updateCalc("+")}><Plus/></button>
               <button id="equals" className='operation button w1'><Equal /></button>
           </div>
         </div>
