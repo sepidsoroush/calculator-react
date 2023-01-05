@@ -17,12 +17,16 @@ function App() {
     ) return ;
 
     setCalc(calc + value);
-    
+
+    // calculate numbers and show it in display section
     if(!ops.includes(value)){
       setResult(eval(calc+value).toString());
     }
-
   }
+  // define equal sign function
+   const equal = () => {
+    setCalc(eval(calc).toString());
+   }
 
   const Calculator = () => (
     <div className="container">
@@ -61,7 +65,7 @@ function App() {
               <button id="multiply" className='operation button w1' onClick={() => updateCalc("*")}><X/></button>
               <button id="subtract" className='operation button w1' onClick={() => updateCalc("-")}><Minus/></button>
               <button id="add" className='operation button w1' onClick={() => updateCalc("+")}><Plus/></button>
-              <button id="equals" className='operation button w1'><Equal /></button>
+              <button id="equals" className='operation button w1' onClick={equal}><Equal /></button>
           </div>
         </div>
       </div>
