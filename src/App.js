@@ -25,23 +25,23 @@ function App() {
               <button id="delete" className='clear button w1'><Backspace /></button>
             </div>
             <div className='row'>
-              <button value={7} id="seven" className='button w1'>7</button>
-              <button value={8} id="eight" className='button w1'>8</button>  
-              <button value={9} id="nine" className='button w1'>9</button>
+              <button value={7} id="seven" className='button w1' onClick={() => updateCalc("7")}>7</button>
+              <button value={8} id="eight" className='button w1' onClick={() => updateCalc("8")}>8</button>  
+              <button value={9} id="nine" className='button w1' onClick={() => updateCalc("9")}>9</button>
             </div>    
             <div className="row">
-              <button value={4} id="four" className='button w1'>4</button>
-              <button value={5} id="five" className='button w1'>5</button>
-              <button value={6} id="six" className='button w1'>6</button>
+              <button value={4} id="four" className='button w1' onClick={() => updateCalc("4")}>4</button>
+              <button value={5} id="five" className='button w1' onClick={() => updateCalc("5")}>5</button>
+              <button value={6} id="six" className='button w1' onClick={() => updateCalc("6")}>6</button>
             </div>    
             <div className="row">
-              <button value={1} id="one" className='button w1'>1</button>
-              <button value={2} id="two" className='button w1'>2</button>
-              <button value={3} id="three" className='button w1'>3</button>
+              <button value={1} id="one" className='button w1' onClick={() => updateCalc("1")}>1</button>
+              <button value={2} id="two" className='button w1' onClick={() => updateCalc("2")}>2</button>
+              <button value={3} id="three" className='button w1' onClick={() => updateCalc("3")}>3</button>
             </div> 
             <div className="row">
-              <button value={0} id="zero" className='button w2'>0</button>
-              <button value={"."} id="decimal" className='button w1'>.</button>
+              <button value={0} id="zero" className='button w2' onClick={() => updateCalc("0")}>0</button>
+              <button value={"."} id="decimal" className='button w1' onClick={() => updateCalc(".")}>.</button>
             </div>   
           </div>
           <div >
